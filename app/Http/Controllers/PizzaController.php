@@ -1,8 +1,8 @@
 <?php
-
 namespace App\Http\Controllers;
-
+use App\Http\Requests\PizzaStoreRequest;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class PizzaController extends Controller
 {
@@ -13,7 +13,7 @@ class PizzaController extends Controller
      */
     public function index()
     {
-        return view('pizza.index');
+        return "all pizza";
     }
 
     /**
@@ -23,18 +23,19 @@ class PizzaController extends Controller
      */
     public function create()
     {
-        //
+        return view('pizza.create');
+
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+     * */
+    public function store(PizzaStoreRequest $request)
     {
-        //
+       
     }
 
     /**
@@ -62,7 +63,7 @@ class PizzaController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Response  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
