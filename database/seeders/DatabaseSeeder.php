@@ -3,7 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-
+use App\Model\Pizza;
+use App\Model\User;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -14,5 +15,12 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
+        $user =new User();
+        $user->name ="Admin";
+        $user->email="admin@gmail.com";
+        $user->password=bcrypt('password');
+        $user->is_admin==1;
+        $user->save();
+        
     }
 }
