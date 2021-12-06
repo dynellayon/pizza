@@ -2,9 +2,10 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
+
 use App\Model\Pizza;
-use App\Model\User;
+use App\Models\User;
+use Illuminate\Database\Seeder;
 class DatabaseSeeder extends Seeder
 {
     /**
